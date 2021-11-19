@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {title: 'home'}) %>
+
+<body>
+  <%- include('partials/nav', {navtitle: 'Fran'}) %>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <form action="/users" method="post">
+    <div>
+      <label for="name">Nombre</label>
+      <input type="text" required=true name="name">
+    </div>
+    <div>
+      <label for="lastname">Apellido</label>
+      <input type="text" required=true name="lastname">
+    </div>
+    <div>
+      <label for="cedula">Cedula</label>
+      <input type="number" required=true name="cedula">
+    </div>
+    <div>
+      <label for="permiso">Clave de Permiso</label>
+      <input type="password" required=true name="permiso">
+    </div>
+    <div>
+      <input type="submit" value="Registrar" />
+      <input type="reset" value="Limpiar" />
+    </div>
+
+
+  </form>
+
+
+</body>
+
+</html>
